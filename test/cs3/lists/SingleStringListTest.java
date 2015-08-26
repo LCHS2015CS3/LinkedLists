@@ -127,5 +127,83 @@ public class SingleStringListTest {
 	assertEquals("woof", sl.get(2));
     }
 
+    @Test(expected=IndexOutOfBoundsException.class)
+    public void testRemoveNothing() {
+	sl.remove(0);
+    }
+
+    @Test
+    public void testRemove() {
+	Arrays.stream(strs).forEach(sl::add);
+	sl.remove(1);
+	assertEquals(2,sl.size());
+	assertEquals("aardvark",sl.get(0));
+	assertEquals("splat",sl.get(1));
+    }
+
+    @Test
+    public void testRemove2() {
+	sl.add("foo");
+	assertEquals(1,sl.size());
+	sl.remove(0);
+	assertEquals(0,sl.size());
+    }
+
+    @Test
+    public void testIndexOf() {
+	Arrays.stream(strs).forEach(sl::add);
+	assertEquals(1,sl.indexOf("zebra"));
+	assertEquals(0,sl.indexOf("aardvark"));
+	assertEquals(2,sl.indexOf("splat"));
+	assertEquals(-1,sl.indexOf("porcupine"));
+    }
+
+    @Test
+    public void testIndexOf2() {
+	assertEquals(-1,"foo");
+    }
+
+    @Test
+    public void testContains() {
+	Arrays.stream(strs).forEach(sl::add);
+	assertTrue(sl.contains("aardvark"));
+	assertTrue(sl.contains("splat"));
+	assertTrue(sl.contains("zebra"));
+	assertFalse(sl.contains("computer"));
+    }
+
+    @Test
+    public void testToArray() {
+	Arrays.stream(strs).forEach(sl::add);
+	assertArrayEquals(strs, sl.toArray());
+    }
+
+    @Test
+    public void testToString() {
+	Arrays.stream(strs).forEach(sl::add);
+	assertEquals("[aardvark, zebra, splat]", sl.toString());
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void testNullCheck1() {
+	sl.add(null);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void testNullCheck2() {
+	sl.add(0, null);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void testNullCheck3() {
+	sl.add("foo");
+	sl.indexOf(null);
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void testNullCheck4() {
+	sl.add("foo");
+	sl.contains(null);
+    }
 
 }
