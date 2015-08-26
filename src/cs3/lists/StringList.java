@@ -51,7 +51,7 @@ public interface StringList {
     void remove(int index);
 
     /**
-     * Returns the index at which the supplied {@code String} exists in the
+     * Returns the first index at which the supplied {@code String} exists in the
      * list. If the given {@code String} does not exist in the list,
      * this method returns a -1.
      * @param element the {@code String} to search for
