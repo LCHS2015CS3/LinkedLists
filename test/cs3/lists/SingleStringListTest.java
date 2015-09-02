@@ -226,7 +226,7 @@ public class SingleStringListTest {
      */
     @Test
     public void testIndexOf2() {
-        assertEquals(-1, "foo");
+        assertEquals(-1, sl.indexOf("foo"));
     }
 
     /**
@@ -269,6 +269,7 @@ public class SingleStringListTest {
     @Test
     public void testToString() {
         Arrays.stream(strs).forEach(sl::add);
+	System.out.println(sl.toString()+"***");
         assertEquals("[aardvark, zebra, splat]", sl.toString());
     }
 
