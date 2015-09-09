@@ -4,7 +4,22 @@ package cs3.lists;
  * Singly-linked list implementation of {@code StringList}.
  * @author Your name here
  */
-public class SingleStringList implements StringList {
+public class SingleStringList implements StringList, StringStack {
+
+    @Override
+    public void push(String str) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String pop() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String peek() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public int size() {
