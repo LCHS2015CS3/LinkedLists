@@ -7,11 +7,13 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Ignore;
 
 /**
  * Unit tests for {@code StringQueue}.
  * @author Mr. Nichols
  */
+@Ignore   // remove this line to enable tests
 public class StringQueueTest {
     
     private StringQueue q;

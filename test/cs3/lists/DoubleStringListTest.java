@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cs3.lists;
 
 import java.util.Arrays;
@@ -11,12 +6,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Unit tests for doubly-linked lists.
  * @author Mr. Nichols
  */
+@Ignore   // remove this line to enable tests
 public class DoubleStringListTest {
 
     private static final String[] strs = new String[]{"aardvark", "zebra", "splat"};

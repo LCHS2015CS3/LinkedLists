@@ -2,12 +2,14 @@ package cs3.lists;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Tests the implementation of {@code StringStack} in {@code SingleStringList}.
  * @author Mr. Nichols
  */
+@Ignore   // remove this line to enable tests
 public class StackTest {
     
     StringStack stack;
